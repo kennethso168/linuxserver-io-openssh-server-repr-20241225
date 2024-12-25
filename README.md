@@ -2,11 +2,11 @@
 
 ## Current behavior
 
-TODO
+This works as expected
 
 ## Expected behavior
 
-TODO
+As above
 
 ## Link to the Renovate issue or Discussion
 
