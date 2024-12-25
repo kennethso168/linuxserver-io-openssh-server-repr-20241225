@@ -1,1 +1,17 @@
-{}
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "config:recommended",
+      ":separatePatchReleases"
+    ],
+    "packageRules": [
+      {
+        "description": "Handling linuxserver images tagged with semver and build number. Ref https://docs.renovatebot.com/modules/versioning/regex/",
+        "matchDatasources": ["docker"],
+        "matchPackageNames": [
+          "ghcr.io/linuxserver/openssh-server"
+        ],
+        "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)_p(?<patch>\\d+)-r(?<build>\\d)-ls(?<revision>.+)$"
+      }
+    ]
+}
